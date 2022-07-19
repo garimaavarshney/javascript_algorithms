@@ -1,0 +1,1 @@
+// Given a number n find the number of pairs (x,y) where both x and y are less then n and highest common factor (hcf) of x and y is 1.
