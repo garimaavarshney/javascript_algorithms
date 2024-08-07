@@ -1,4 +1,5 @@
-// Let 1 represent ‘A’, 2 represents ‘B’, etc. Given a digit sequence, count the number of possible decodings of the given digit sequence. 
+// Let 1 represent ‘A’, 2 represents ‘B’, etc. Given a digit sequence, count the number of possible
+// decodings of the given digit sequence. 
 
 // Input: digits[] = "121"
 // Output: 3
@@ -22,12 +23,14 @@ function countWaysMethodOne() {
 
         let count = 0; // We initialize the total count of decodings as 0
 
-        // If the last digit is non-zero, recur for the remaining (n-1) digits and add the result to the total count. 
+        // If the last digit is non-zero, recur for the remaining (n-1) digits and add the result to
+        // the total count. 
         if (input[n - 1] > '0') {
             count = countDecoding(input, n - 1);
         }
 
-        // If the last two digits form a valid character (or smaller than 27), recur for remaining (n-2) digits and add the result to the total count.
+        // If the last two digits form a valid character (or smaller than 27), recur for remaining
+        // (n-2) digits and add the result to the total count.
         if (input[n - 2] == '1' ||
             (input[n - 2] == '2' &&
                 input[n - 1] < '7')) {
@@ -62,7 +65,8 @@ function countWaysMethodTwo() {
                 count[i] = count[i - 1];
             }
 
-            // If second last digit is smaller than 2 and last digit is smaller than 7, then last two digits form a valid character
+            // If second last digit is smaller than 2 and last digit is smaller than 7, then last two
+            // digits form a valid character
             if (digits[i - 2] == '1' ||
                 (digits[i - 2] == '2' &&
                     digits[i - 1] < '7'))
